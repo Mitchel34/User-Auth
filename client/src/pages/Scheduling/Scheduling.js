@@ -56,7 +56,7 @@ class App extends Component {
 					onChange={this.onChange}
 					value={this.state.date}
 				/>
-				<div id="myModal" className="modal" style={this.state.showModal ? { display: 'block' } : { display: 'none' }}>
+				<div id="myModal" className="modal modal-dialog modal-dialog-centered" style={this.state.showModal ? { display: 'block' } : { display: 'none' }}>
 					<div className="modal-content">
 						<span className="close" onClick={this.closeModal}>&times;</span>
 			{/* <Form></Form> */}

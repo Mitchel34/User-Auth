@@ -5,11 +5,11 @@ class Upcomming extends Component {
 
     render() {
         return (
-            <div className="App">
-
+            <div className="App modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-content">
                 <div className="col-lg" >
                     <h2 className="h2-responsive product-name" >
-                        <strong >Upcomming Services</strong>
+                        <strong >Upcoming Services</strong>
                     </h2>
                 </div>
                 <div className="container">
@@ -57,6 +57,7 @@ class Upcomming extends Component {
                     </div>
                 </div>
                 <br />
+                </div>
             </div>
         )
     }
