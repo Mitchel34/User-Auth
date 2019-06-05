@@ -13,8 +13,9 @@ class Register extends Component {
     error: ""
   }
 
-  handleSubmit = (email, password) => {
-    API.Users.register(email, password)
+  handleSubmit = (email, password, firstName, lastName, phone, address) => {
+    console.log(email, password, firstName, lastName, phone, address);
+    API.Users.register(email, password, firstName, lastName, phone, address)
       .then(response => {
           this.setState({ redirectToReferrer: true })
       })
@@ -26,8 +27,9 @@ class Register extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/login" } };
     const { redirectToReferrer } = this.state;
+    console.log(this.props);
 
     if (redirectToReferrer) {
       return <Redirect to={from} />;
@@ -36,23 +38,26 @@ class Register extends Component {
     return (
       <div className='Login'>
         <div className='row'>
-          <div className='col'>
-            <h1>Register Account</h1>
+          <div className='col-sm'>
           </div>
         </div>
+        <div className='row'>
+          <div className='col-sm'>
+            <RegisterForm onSubmit={this.handleSubmit} />
+          </div>
+        </div>
+        <br />
         {this.state.error &&
           <div className='row'>
-            <div className='col'>
+          <div className='col-sm-3'></div>
+            <div className='col-sm-6'>
               <div className='alert alert-danger mb-3' role='alert'>
                 {this.state.error}
               </div>
             </div>
+            <div className='col-sm-3'></div>
           </div>}
-        <div className='row'>
-          <div className='col'>
-            <RegisterForm onSubmit={this.handleSubmit} />
-          </div>
-        </div>
+        
       </div>
     );
   }
