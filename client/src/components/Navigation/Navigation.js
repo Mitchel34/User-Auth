@@ -28,7 +28,11 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
+<<<<<<< HEAD
           <Link className='navbar-brand' to='/'><img src={logo} width="70" height="30" className="d-inline-block align-top" alt="" /></Link>
+=======
+          <Link className='navbar-brand' to='#'><img src={logo} width="70" height="30" className="d-inline-block align-top" alt=""/></Link>
+>>>>>>> 5aebc10ad989fae8533e0c3845717cc4fde927c2
           <button className={togglerClass} onClick={this.toggleCollapse} id="logo" data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
@@ -36,7 +40,7 @@ class Navigation extends Component {
             <ul className='navbar-nav mr-auto'>
               {user &&
                 <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
+                  {/* <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link> */}
                 </li>}
             </ul>
             <ul className='navbar-nav'>
@@ -50,7 +54,7 @@ class Navigation extends Component {
                 <li className='nav-item'><Link className='nav-link' to='/clienthome' onClick={this.toggleCollapse}>ClientHome</Link></li>
                   <li className='nav-item'><Link className='nav-link text-success font-weight-bold' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
                   <li className='nav-item'><Link className='nav-link text-primary font-weight-bold' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
-                </>}
+                  </>}
             </ul>
           </div>
         </nav>
