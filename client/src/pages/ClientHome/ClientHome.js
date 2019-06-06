@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap4-modal';
 // import Upcomming from '../../components/viewAllModal/viewUpcommingModal';
 
+// export default ClientHome;
 class ClientHome extends Component {
   state = {
     email: '',
